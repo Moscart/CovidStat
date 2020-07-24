@@ -1,0 +1,140 @@
+/* 
+#f0ece3
+#dfd3c3
+#c7b198
+#596e79
+*/
+* {
+	margin: 0 auto;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	background-color: #dfd3c3;
+	margin-bottom: 88px;
+}
+nav {
+	padding: 20px;
+	background-color: #596e79;
+	color: #f0ece3;
+	font-weight: bold;
+	font-size: xx-large;
+	text-shadow: 3px 3px 5px black;
+}
+search-box {
+	display: block;
+	text-align: center;
+	margin: 30px 15%;
+	background-color: #596e79;
+	border-radius: 4px;
+	padding: 20px;
+}
+search-box .inputCountry {
+	width: 50%;
+	padding: 12px 20px;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+search-box .buttonSubmit {
+	width: 100px;
+	padding: 12px 20px;
+	color: #f0ece3;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	background-color: #c7b198;
+	box-sizing: border-box;
+}
+search-box .buttonSubmit:hover {
+	background-color: #c7b198d0;
+}
+.dataGlobal,
+.dataCountry {
+	margin: 30px 15%;
+	font-size: 0;
+}
+data-covid > div {
+	color: white;
+	width: calc(100% / 3);
+	display: inline-block;
+	font-size: initial;
+	text-align: center;
+	border: solid transparent;
+	box-sizing: border-box;
+}
+.dataConfirmed .title {
+	background-color: #efb700;
+}
+.dataRecovered .title {
+	background-color: #008450;
+}
+.dataDeaths .title {
+	background-color: #b81d13;
+}
+.lastUpdate .title {
+	background-color: #1347b8;
+}
+.lastUpdate {
+	width: 100% !important;
+}
+.title {
+	border: solid black;
+	border-radius: 10px 10px 0 0;
+	border-bottom: none;
+	color: black;
+	font-weight: bold;
+	padding: 10px;
+}
+.content {
+	background-color: #596e79;
+	color: #f0ece3;
+	border: solid black;
+	border-radius: 0 0 10px 10px;
+	padding: 20px;
+}
+.error {
+	margin: 30px 15%;
+	text-align: center;
+}
+.error .title {
+	background-color: #b81d13;
+}
+@media only screen and (max-width: 700px) {
+	search-box,
+	.dataGlobal,
+	.dataCountry,
+	.error {
+		margin: 30px 5%;
+	}
+	search-box .inputCountry {
+		display: block;
+		width: 100%;
+	}
+	search-box .buttonSubmit {
+		display: block;
+		width: 100%;
+		margin-top: 5px;
+	}
+	data-covid > div {
+		width: 100%;
+	}
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 20px;
+	background-color: #596e79;
+	color: #f0ece3;
+	text-align: center;
+}
+footer > a {
+	text-decoration: none;
+	color: #c7b198;
+}
