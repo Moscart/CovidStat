@@ -1,2 +1,2 @@
 # CovidStat
-Visit https://moscart.vercel.app/ to see the project
+Visit https://covidstat.vercel.app/ to see the project
