@@ -10,15 +10,12 @@ const countryList = document.querySelector("#countryList");
 const dataCountry = document.querySelector(".dataCountry");
 const error = document.querySelector(".error");
 const baseUrl = "https://covid19.mathdro.id/api";
-const date = ((d) => new Date(d.setDate(d.getDate() - 1)))(new Date());
 
 dataCountry.style.display = "none";
 error.style.display = "none";
 
 fetch(`${baseUrl}/countries`)
-	.then((response) => {
-		return response.json();
-	})
+	.then((response) => response.json())
 	.then((responseJson) => {
 		responseJson.countries.map((i) => {
 			const optionList = document.createElement("Option");
@@ -30,10 +27,8 @@ fetch(`${baseUrl}/countries`)
 		console.log(error);
 	});
 
-fetch(`${baseUrl}`)
-	.then((response) => {
-		return response.json();
-	})
+fetch(baseUrl)
+	.then((response) => response.json())
 	.then((responseJson) => {
 		document.querySelector(
 			".dataGlobal .dataConfirmed .content"
@@ -58,11 +53,9 @@ buttonSubmit.addEventListener("click", function () {
 	dataCountry.style.display = "none";
 	error.style.display = "none";
 	const country = inputCountry.value;
-	if (country != "") {
+	if (country !== "") {
 		fetch(`${baseUrl}/countries/${country}`)
-			.then((response) => {
-				return response.json();
-			})
+			.then((response) => response.json())
 			.then((responseJson) => {
 				if (!responseJson.error) {
 					dataCountry.style.display = "";
@@ -95,7 +88,7 @@ buttonSubmit.addEventListener("click", function () {
 });
 
 function changedNumber(number) {
-	return number.toLocaleString().replace(/\,/g, ".");
+	return number.toLocaleString().replace(/,/g, ".");
 }
 
 function dateFormat(d) {

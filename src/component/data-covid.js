@@ -1,8 +1,4 @@
 class DataCovid extends HTMLElement {
-	// constructor() {
-	// 	super();
-	// 	this.shadowDOM = this.attachShadow({ mode: "open" });
-	// }
 	connectedCallback() {
 		this.global = this.getAttribute("global") || null;
 		this.global = this.global ? "Global " : "";
